@@ -1,14 +1,15 @@
 ﻿document.addEventListener("DOMContentLoaded", () => {
+  // Inicializacion central del sitio.
   setupPageLoader();
   setupMobileNav();
   setupRevealAnimations();
-  setupHoverReactiveCards();
   setupProductFilters();
   setupContactValidation();
   setupFooterYear();
   setupParticles();
 });
 
+// Loader inicial y transicion al navegar entre paginas internas.
 function setupPageLoader() {
   const loader = document.getElementById("pageLoader");
 
@@ -115,6 +116,7 @@ function setupPageLoader() {
     });
   });
 }
+// Menu hamburguesa para pantallas pequenas.
 function setupMobileNav() {
   const toggle = document.querySelector(".nav-toggle");
   const nav = document.querySelector(".site-nav");
@@ -129,6 +131,7 @@ function setupMobileNav() {
   });
 }
 
+// Entrada progresiva de secciones al hacer scroll.
 function setupRevealAnimations() {
   const revealElements = document.querySelectorAll(".reveal");
 
@@ -160,25 +163,7 @@ function setupRevealAnimations() {
   });
 }
 
-function setupHoverReactiveCards() {
-  const cards = document.querySelectorAll(".hover-reactive");
-
-  cards.forEach((card) => {
-    card.addEventListener("pointermove", (event) => {
-      const rect = card.getBoundingClientRect();
-      const x = event.clientX - rect.left;
-      const y = event.clientY - rect.top;
-      card.style.setProperty("--mx", `${x}px`);
-      card.style.setProperty("--my", `${y}px`);
-    });
-
-    card.addEventListener("pointerleave", () => {
-      card.style.setProperty("--mx", "50%");
-      card.style.setProperty("--my", "50%");
-    });
-  });
-}
-
+// Filtros por categoria para la pagina de productos.
 function setupProductFilters() {
   const productGrid = document.getElementById("productGrid");
 
@@ -240,6 +225,7 @@ function setupProductFilters() {
   applyFilter(queryFilter || "todos");
 }
 
+// Validacion requerida por la rubrica del formulario de contacto.
 function setupContactValidation() {
   const form = document.getElementById("contactForm");
 
@@ -336,6 +322,7 @@ function setupContactValidation() {
   });
 }
 
+// Actualiza el anio legal automaticamente en todos los footers.
 function setupFooterYear() {
   const yearNodes = document.querySelectorAll("[data-current-year]");
 
@@ -349,6 +336,7 @@ function setupFooterYear() {
   });
 }
 
+// Fondo interactivo de particulas con ajuste para scroll en moviles.
 function setupParticles() {
   const canvas = document.getElementById("particle-canvas");
 

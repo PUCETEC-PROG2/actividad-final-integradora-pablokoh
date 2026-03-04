@@ -4,8 +4,8 @@
 **Blue Flame** - Simulacion de E-Commerce con HTML5, CSS y JavaScript
 
 ## Integrantes
-- Integrante 1: `Pablo Puentes`
-- Integrante 2: `Gabriel Chulde`
+-  `Pablo Puentes`
+-  `Gabriel Chulde`
 
 ## Tematica elegida
 **Instrumentos musicales**

@@ -1,14 +1,8 @@
 :root {
   --bg-deep: #0a1230;
-  --bg-mid: #142a5d;
-  --surface: rgba(255, 255, 255, 0.08);
-  --surface-strong: rgba(255, 255, 255, 0.16);
   --text-main: #eef5ff;
   --text-muted: #c7d8ef;
-  --accent: #4cb8ff;
   --accent-warm: #ff9f3f;
-  --danger: #ff6363;
-  --shadow: 0 18px 38px rgba(0, 0, 0, 0.34);
   --radius-lg: 20px;
   --radius-md: 14px;
 }
@@ -29,6 +23,7 @@ body {
     linear-gradient(145deg, rgba(0, 0, 0, 0.9), rgba(12, 18, 32, 0.78)),
     url("../img/banners/background-final.jpg");
   background-position: center, center top;
+  /* Nota del equipo (Pablo): se repite la imagen para cubrir espacios en pantallas altas. */
   background-repeat: no-repeat, repeat;
   background-size: cover, contain;
   background-color: var(--bg-deep);
@@ -340,6 +335,7 @@ main,
 
 .card,
 .feature-card {
+  /* Se deja transparente para que el fondo global se vea uniforme en todo el sitio. */
   background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: var(--radius-lg);
@@ -367,6 +363,7 @@ main,
 }
 
 .hover-reactive {
+  /* Se retiro el brillo por puntero; esta clase queda para recorte visual limpio. */
   overflow: hidden;
   position: relative;
 }
@@ -584,6 +581,7 @@ textarea:focus {
   }
 
   .site-nav {
+    /* Menu desplegable en movil con capa superior para no quedar detras del contenido. */
     background: rgba(5, 17, 24, 0.93);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 12px;
