@@ -1,0 +1,203 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Productos de Blue Flame">
+  <title>Blue Flame | Productos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Sora:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+  <div id="pageLoader" class="page-loader" aria-live="polite" aria-label="Pantalla de carga">
+    <div class="page-loader__box">
+      <img class="page-loader__img" src="assets/img/loader/ozzy-4.png" alt="Cargando assets de Blue Flame">
+      <p class="page-loader__text">Estamos cargando los assets...</p>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-content">
+      <a class="brand" href="index.html">
+        <img class="brand-logo" src="assets/img/logo.png" alt="Logo Blue Flame">
+        <span>Blue Flame</span>
+      </a>
+      <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">Menu</button>
+      <nav class="site-nav" aria-label="Navegacion principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="categorias.html">Categorias</a></li>
+          <li><a class="active" href="productos.html">Productos</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero reveal">
+      <div class="container">
+        <p class="eyebrow">Instrumentos Blue Flame</p>
+        <h1>Productos</h1>
+        <p id="filtroActual">Mostrando todos los instrumentos disponibles.</p>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="container">
+        <div class="filter-bar" role="toolbar" aria-label="Filtros de categoria">
+          <button class="filter-btn active" data-filter="todos" type="button">Todos</button>
+          <button class="filter-btn" data-filter="cuerdas" type="button">Cuerdas</button>
+          <button class="filter-btn" data-filter="percusion" type="button">Percusion</button>
+          <button class="filter-btn" data-filter="teclados" type="button">Teclados</button>
+        </div>
+
+        <section class="grid three-cols product-grid" id="productGrid" aria-label="Listado de productos">
+          <article class="card product-card hover-reactive" data-category="cuerdas">
+            <img src="assets/img/productos/guitarra-acustica-classic.png" alt="Guitarra acustica classic">
+            <h2>Guitarra Acustica Classic</h2>
+            <p class="price">$249.00</p>
+            <p>Sonido calido y cuerpo ligero para practicas, clases y presentaciones.</p>
+          </article>
+
+          <article class="card product-card hover-reactive" data-category="cuerdas">
+            <img src="assets/img/productos/bajo-electrico-groove.png" alt="Bajo electrico groove">
+            <h2>Bajo Electrico Groove</h2>
+            <p class="price">$399.00</p>
+            <p>Cuatro cuerdas con gran definicion para banda, estudio y escenario.</p>
+          </article>
+
+          <article class="card product-card hover-reactive" data-category="cuerdas">
+            <img src="assets/img/productos/guitarra-electrica-blaze.jpg" alt="Guitarra electrica blaze">
+            <h2>Guitarra Electrica Blaze</h2>
+            <p class="price">$469.00</p>
+            <p>Pastillas potentes y mastil comodo para rock, pop y presentaciones.</p>
+          </article>
+
+          <article class="card product-card hover-reactive" data-category="cuerdas">
+            <img src="assets/img/productos/ukelele-sunburst.png" alt="Ukelele sunburst">
+            <h2>Ukelele Sunburst</h2>
+            <p class="price">$89.00</p>
+            <p>Instrumento ligero y brillante, ideal para practica diaria y viajes.</p>
+          </article>
+
+          <article class="card product-card hover-reactive" data-category="cuerdas">
+            <img src="assets/img/productos/violin-student-pro.png" alt="Violin student pro">
+            <h2>Violin Student Pro</h2>
+            <p class="price">$199.00</p>
+            <p>Excelente opcion para aprendizaje formal con sonido claro y estable.</p>
+          </article>
+
+          <article class="card product-card hover-reactive" data-category="cuerdas">
+            <img src="assets/img/productos/mandolina-folk-air.png" alt="Mandolina folk air">
+            <h2>Mandolina Folk Air</h2>
+            <p class="price">$159.00</p>
+            <p>Timbre brillante para musica folk, acustica y arreglos melodicos.</p>
+          </article>
+
+          <article class="card product-card hover-reactive" data-category="percusion">
+            <img src="assets/img/productos/bateria-acustica-stage.png" alt="Bateria acustica stage">
+            <h2>Bateria Acustica Stage</h2>
+            <p class="price">$689.00</p>
+            <p>Set completo con toms, bombo y redoblante para estilos modernos.</p>
+          </article>
+
+          <article class="card product-card hover-reactive" data-category="percusion">
+            <img src="assets/img/productos/cajon-peruano-artesanal.png" alt="Cajon peruano artesanal">
+            <h2>Cajon Peruano Artesanal</h2>
+            <p class="price">$119.00</p>
+            <p>Percusion compacta con gran proyeccion para sesiones acusticas.</p>
+          </article>
+
+          <article class="card product-card hover-reactive" data-category="percusion">
+            <img src="assets/img/productos/bongo-fusion-set.jpg" alt="Bongo fusion set">
+            <h2>Bongo Fusion Set</h2>
+            <p class="price">$99.00</p>
+            <p>Par de bongos con sonido definido para ritmos latinos y pop.</p>
+          </article>
+
+          <article class="card product-card hover-reactive" data-category="percusion">
+            <img src="assets/img/productos/conga-rhythm-pro.png" alt="Conga rhythm pro">
+            <h2>Conga Rhythm Pro</h2>
+            <p class="price">$329.00</p>
+            <p>Profundidad sonora y gran proyeccion para ensambles y tarima.</p>
+          </article>
+
+          <article class="card product-card hover-reactive" data-category="percusion">
+            <img src="assets/img/productos/platillos-crash-16.png" alt="Platillos crash 16">
+            <h2>Platillos Crash 16"</h2>
+            <p class="price">$139.00</p>
+            <p>Ataque rapido y sustain controlado para bateria acustica moderna.</p>
+          </article>
+
+          <article class="card product-card hover-reactive" data-category="percusion">
+            <img src="assets/img/productos/pad-practica-silent-beat.png" alt="Pad de practica silent beat">
+            <h2>Pad de Practica Silent Beat</h2>
+            <p class="price">$49.00</p>
+            <p>Superficie de rebote realista para estudiar tecnica sin ruido alto.</p>
+          </article>
+
+          <article class="card product-card hover-reactive" data-category="teclados">
+            <img src="assets/img/productos/teclado-digital-88-teclas.jpg" alt="Teclado digital 88 teclas">
+            <h2>Teclado Digital 88 Teclas</h2>
+            <p class="price">$549.00</p>
+            <p>Respuesta sensible y sonidos realistas para practica y composicion.</p>
+          </article>
+
+          <article class="card product-card hover-reactive" data-category="teclados">
+            <img src="assets/img/productos/sintetizador-wave-x.png" alt="Sintetizador wave x">
+            <h2>Sintetizador Wave X</h2>
+            <p class="price">$729.00</p>
+            <p>Motor de sintesis versatil para crear capas, pads y sonidos unicos.</p>
+          </article>
+
+          <article class="card product-card hover-reactive" data-category="teclados">
+            <img src="assets/img/productos/piano-digital-home-61.webp" alt="Piano digital home 61">
+            <h2>Piano Digital Home 61</h2>
+            <p class="price">$349.00</p>
+            <p>Perfecto para hogar y estudio inicial con funciones educativas.</p>
+          </article>
+
+          <article class="card product-card hover-reactive" data-category="teclados">
+            <img src="assets/img/productos/controlador-midi-air-49.png" alt="Controlador midi air 49">
+            <h2>Controlador MIDI Air 49</h2>
+            <p class="price">$219.00</p>
+            <p>Ideal para crear ritmos, capas y acompanamientos en tus producciones.</p>
+          </article>
+
+          <article class="card product-card hover-reactive" data-category="teclados">
+            <img src="assets/img/productos/sintetizador-analog-pulse.jpg" alt="Sintetizador analog pulse">
+            <h2>Sintetizador Analog Pulse</h2>
+            <p class="price">$899.00</p>
+            <p>Texturas analogicas con gran caracter para produccion avanzada.</p>
+          </article>
+
+          <article class="card product-card hover-reactive" data-category="teclados">
+            <img src="assets/img/productos/teclado-portatil-kids-37.png" alt="Teclado portatil kids 37">
+            <h2>Teclado Portatil Kids 37</h2>
+            <p class="price">$79.00</p>
+            <p>Diseno compacto para iniciar en musica con sonidos y ritmos basicos.</p>
+          </article>
+        </section>
+
+        <p class="empty-state" id="emptyState" hidden>No hay productos para la categoria seleccionada.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Proyecto academico de e-commerce | Blue Flame</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
+
+
+
+

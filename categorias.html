@@ -1,0 +1,89 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Categorias de Blue Flame">
+  <title>Blue Flame | Categorias</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Sora:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+  <div id="pageLoader" class="page-loader" aria-live="polite" aria-label="Pantalla de carga">
+    <div class="page-loader__box">
+      <img class="page-loader__img" src="assets/img/loader/ozzy-4.png" alt="Cargando assets de Blue Flame">
+      <p class="page-loader__text">Estamos cargando los assets...</p>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-content">
+      <a class="brand" href="index.html">
+        <img class="brand-logo" src="assets/img/logo.png" alt="Logo Blue Flame">
+        <span>Blue Flame</span>
+      </a>
+      <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">Menu</button>
+      <nav class="site-nav" aria-label="Navegacion principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a class="active" href="categorias.html">Categorias</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero reveal">
+      <div class="container">
+        <p class="eyebrow">Blue Flame Quito</p>
+        <h1>Categorias disponibles</h1>
+        <p>Selecciona una categoria y revisa instrumentos pensados para practica, estudio y presentaciones.</p>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="container">
+        <div class="grid three-cols">
+          <article class="card category-card hover-reactive">
+            <img src="assets/img/categorias/categoria-cuerdas.jpg" alt="Categoria de instrumentos de cuerda">
+            <h2>Cuerdas</h2>
+            <p>Guitarras, bajos, violines y mas opciones para clases, ensayos y tarima.</p>
+            <a class="btn btn-secondary" href="productos.html?categoria=cuerdas">Ver productos</a>
+          </article>
+
+          <article class="card category-card hover-reactive">
+            <img src="assets/img/categorias/categoria-percusion.jpg" alt="Categoria de instrumentos de percusion">
+            <h2>Percusion</h2>
+            <p>Baterias, cajones, bongos y congas para mantener el ritmo en cualquier genero.</p>
+            <a class="btn btn-secondary" href="productos.html?categoria=percusion">Ver productos</a>
+          </article>
+
+          <article class="card category-card hover-reactive">
+            <img src="assets/img/categorias/teclados.jpg" alt="Categoria de teclados musicales">
+            <h2>Teclados</h2>
+            <p>Teclados, pianos y sintetizadores para composicion, practica y shows en vivo.</p>
+            <a class="btn btn-secondary" href="productos.html?categoria=teclados">Ver productos</a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Proyecto academico de e-commerce | Blue Flame</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
+
+
+
+

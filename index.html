@@ -1,0 +1,108 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Blue Flame: tienda de instrumentos musicales en Quito.">
+  <title>Blue Flame | Inicio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Sora:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+  <div id="pageLoader" class="page-loader" aria-live="polite" aria-label="Pantalla de carga">
+    <div class="page-loader__box">
+      <img class="page-loader__img" src="assets/img/loader/ozzy-4.png" alt="Cargando assets de Blue Flame">
+      <p class="page-loader__text">Estamos cargando los assets...</p>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-content">
+      <a class="brand" href="index.html">
+        <img class="brand-logo" src="assets/img/logo.png" alt="Logo Blue Flame">
+        <span>Blue Flame</span>
+      </a>
+      <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">Menu</button>
+      <nav class="site-nav" aria-label="Navegacion principal">
+        <ul>
+          <li><a class="active" href="index.html">Inicio</a></li>
+          <li><a href="categorias.html">Categorias</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero reveal">
+      <div class="container hero-grid">
+        <article class="hero-copy">
+          <p class="eyebrow">Instrumentos en Quito</p>
+          <h1>Tenemos los mejores instrumentos de Quito para cada estilo musical</h1>
+          <p>
+            En Blue Flame encuentras guitarras, percusion y teclados para estudio, banda y escenario.
+            Revisa categorias, mira precios y elige el instrumento ideal para tu sonido.
+          </p>
+          <a class="btn btn-primary" href="categorias.html">Ver categorias</a>
+        </article>
+        <article class="hero-logo-stage">
+          <img class="hero-main-logo" src="assets/img/logo.png" alt="Logo Blue Flame">
+        </article>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="container">
+        <h2>Por que elegir Blue Flame?</h2>
+        <div class="grid three-cols">
+          <article class="card hover-reactive">
+            <h3>Instrumentos seleccionados</h3>
+            <p>Trabajamos con instrumentos recomendados para principiantes y musicos con experiencia.</p>
+          </article>
+          <article class="card hover-reactive">
+            <h3>Atencion en Quito</h3>
+            <p>Asesoramos tu compra segun tu nivel, genero musical y presupuesto dentro de la ciudad.</p>
+          </article>
+          <article class="card hover-reactive">
+            <h3>Pedidos y consultas</h3>
+            <p>Escribenos para cotizaciones, disponibilidad de stock y recomendaciones de compra.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="container">
+        <h2>Acceso rapido</h2>
+        <div class="grid two-cols">
+          <article class="feature-card hover-reactive">
+            <h3>Categorias destacadas</h3>
+            <p>Explora por tipo de instrumento para encontrar opciones mas rapido.</p>
+            <a class="btn btn-secondary" href="categorias.html">Ir a categorias</a>
+          </article>
+          <article class="feature-card hover-reactive">
+            <h3>Productos disponibles</h3>
+            <p>Consulta cada instrumento con su imagen, precio y descripcion clara.</p>
+            <a class="btn btn-secondary" href="productos.html">Ver productos</a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Proyecto academico de e-commerce | Blue Flame</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
+
+
+

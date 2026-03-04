@@ -1,0 +1,109 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contacto de Blue Flame">
+  <title>Blue Flame | Contacto</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Sora:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+  <div id="pageLoader" class="page-loader" aria-live="polite" aria-label="Pantalla de carga">
+    <div class="page-loader__box">
+      <img class="page-loader__img" src="assets/img/loader/ozzy-4.png" alt="Cargando assets de Blue Flame">
+      <p class="page-loader__text">Estamos cargando los assets...</p>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-content">
+      <a class="brand" href="index.html">
+        <img class="brand-logo" src="assets/img/logo.png" alt="Logo Blue Flame">
+        <span>Blue Flame</span>
+      </a>
+      <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">Menu</button>
+      <nav class="site-nav" aria-label="Navegacion principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="categorias.html">Categorias</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a class="active" href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero reveal">
+      <div class="container">
+        <p class="eyebrow">Estamos para ayudarte</p>
+        <h1>Formulario de contacto</h1>
+        <p>Completa los campos para cotizar instrumentos y recibir atencion personalizada en Quito.</p>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="container contact-layout">
+        <article class="card hover-reactive">
+          <h2>Informacion</h2>
+          <p>Horario de atencion: Lunes a Viernes, 09:00 - 18:00</p>
+          <p>Correo: contacto@blueflame.com</p>
+          <p>Ciudad base: Quito</p>
+        </article>
+
+        <article class="card hover-reactive">
+          <form id="contactForm" novalidate>
+            <div class="form-row">
+              <label for="nombre">Nombre</label>
+              <input id="nombre" name="nombre" type="text" autocomplete="name" required>
+              <p class="error-message" data-error-for="nombre"></p>
+            </div>
+
+            <div class="form-row">
+              <label for="ciudad">Ciudad</label>
+              <input id="ciudad" name="ciudad" type="text" autocomplete="address-level2" required>
+              <p class="error-message" data-error-for="ciudad"></p>
+            </div>
+
+            <div class="form-row">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required>
+              <p class="error-message" data-error-for="email"></p>
+            </div>
+
+            <div class="form-row">
+              <label for="asunto">Asunto</label>
+              <input id="asunto" name="asunto" type="text" required>
+              <p class="error-message" data-error-for="asunto"></p>
+            </div>
+
+            <div class="form-row">
+              <label for="descripcion">Descripcion</label>
+              <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+              <p class="error-message" data-error-for="descripcion"></p>
+            </div>
+
+            <button class="btn btn-primary" type="submit">Enviar mensaje</button>
+            <p class="form-status" id="formStatus" aria-live="polite"></p>
+          </form>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Proyecto academico de e-commerce | Blue Flame</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
+
+
+
