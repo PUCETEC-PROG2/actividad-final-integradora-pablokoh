@@ -5,6 +5,7 @@
   setupHoverReactiveCards();
   setupProductFilters();
   setupContactValidation();
+  setupFooterYear();
   setupParticles();
 });
 
@@ -335,6 +336,19 @@ function setupContactValidation() {
   });
 }
 
+function setupFooterYear() {
+  const yearNodes = document.querySelectorAll("[data-current-year]");
+
+  if (!yearNodes.length) {
+    return;
+  }
+
+  const currentYear = String(new Date().getFullYear());
+  yearNodes.forEach((node) => {
+    node.textContent = currentYear;
+  });
+}
+
 function setupParticles() {
   const canvas = document.getElementById("particle-canvas");
 
@@ -349,13 +363,45 @@ function setupParticles() {
 
   let width = 0;
   let height = 0;
+  let previousWidth = 0;
+  let previousHeight = 0;
   let particles = [];
   const pointer = { x: null, y: null };
-  const particleCount = Math.max(32, Math.min(80, Math.floor(window.innerWidth / 19)));
+  const getParticleCount = () => Math.max(32, Math.min(80, Math.floor(window.innerWidth / 19)));
 
-  function resizeCanvas() {
-    width = canvas.width = window.innerWidth;
-    height = canvas.height = window.innerHeight;
+  function resizeCanvas(force = false) {
+    const nextWidth = window.innerWidth;
+    const nextHeight = window.innerHeight;
+    const widthDelta = Math.abs(nextWidth - previousWidth);
+    const heightDelta = Math.abs(nextHeight - previousHeight);
+    const isTouchDevice = "ontouchstart" in window || navigator.maxTouchPoints > 0;
+
+    // En moviles, el scroll suele cambiar levemente el alto por la barra del navegador.
+    // Ignorar esos cambios evita saltos visuales en las particulas.
+    const shouldIgnoreMobileShift =
+      !force &&
+      isTouchDevice &&
+      widthDelta < 2 &&
+      heightDelta > 0 &&
+      heightDelta < 180;
+
+    if (shouldIgnoreMobileShift) {
+      return;
+    }
+
+    previousWidth = nextWidth;
+    previousHeight = nextHeight;
+    width = canvas.width = nextWidth;
+    height = canvas.height = nextHeight;
+
+    if (!particles.length) {
+      return;
+    }
+
+    particles.forEach((particle) => {
+      particle.x = Math.min(Math.max(particle.x, 0), width);
+      particle.y = Math.min(Math.max(particle.y, 0), height);
+    });
   }
 
   function randomParticle() {
@@ -369,6 +415,7 @@ function setupParticles() {
   }
 
   function createParticles() {
+    const particleCount = getParticleCount();
     particles = Array.from({ length: particleCount }, randomParticle);
   }
 
@@ -435,13 +482,18 @@ function setupParticles() {
     requestAnimationFrame(animate);
   }
 
-  resizeCanvas();
+  resizeCanvas(true);
   createParticles();
   animate();
 
   window.addEventListener("resize", () => {
+    const oldCount = particles.length;
     resizeCanvas();
-    createParticles();
+
+    const nextCount = getParticleCount();
+    if (nextCount !== oldCount) {
+      createParticles();
+    }
   });
 
   window.addEventListener("pointermove", (event) => {

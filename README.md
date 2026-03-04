@@ -37,13 +37,14 @@ Caracteristicas principales implementadas:
 ![Captura eleccion de imagenes](assets/img/capturas/captura-eleccion-imagenes-pablo.png)
 - Captura 3 - Inicio de la pagina web:
 ![Captura inicio web](assets/img/capturas/captura-inicio-web.png)
-- Captura de contacto: `[Pendiente de agregar]`
+- Captura 4 - Formulario de contacto:
+![Captura contacto](assets/img/capturas/captura-contacto.png)
 
 ## Repositorio en GitHub
-`[Pegar enlace del repositorio]`
+https://github.com/PUCETEC-PROG2/actividad-final-integradora-pablokoh
 
 ## Sitio desplegado en GitHub Pages
-`[Pegar enlace publico de GitHub Pages]`
+https://pucetec-prog2.github.io/actividad-final-integradora-pablokoh/
 
 ## Notas
 - Imagenes organizadas en:
